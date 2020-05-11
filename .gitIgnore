@@ -1,1 +1,11 @@
-# JAVATPCProject
+
+/build/
+*/.git/*
+.classpath
+.git
+.project
+.settings/
+target/
+
+# Compiled class file
+*.class
