@@ -16,6 +16,21 @@ public class Project01_E {
 		
 		try {
 			String pos = URLEncoder.encode(point_x + " " + point_y,"UTF-8");
+			String url = URL_STATICMAP;
+			url += "center=" + point_x + "," + point_y;
+			url += "&level=16&w=700&h=500";
+			url += "&markers=type:t|size:mid|pos:" + pos + "|lavel:" + URLEncoder.encode(address,"UTF-8");
+			URL u = new URL(url);
+			
+			HttpURLConnection con = (HttpURLConnection)u.openConnection();
+			
+			con.setRequestMethod("GET");
+			con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", "3dbkfwpg2l");
+			con.setRequestProperty("X-NCP-APIGW-API-KEY", "cHLyuA55lqMYyL1KnbQrmeTmm8k7JUVAxd7kamr5");
+			
+			
+			
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
